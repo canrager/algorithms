@@ -1,0 +1,1 @@
+Notes on the [algorithms and data dtructures curriculum](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) and solutions to leetcode problems.
