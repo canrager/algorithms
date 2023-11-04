@@ -32,3 +32,37 @@ class Solution:
             if running_sum < most_negative_sum:
                 most_negative_sum = running_sum
         return max_sum
+    
+
+#%% https://leetcode.com/problems/container-with-most-water/
+
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        '''
+        equation to maximize: area = (r-l) * min(height[r],height[l])
+        Maximize both factors.
+        (r-l) is maximal with l=0, r = len(height)-1
+        -> that's where we start and initialize our pointers to
+        Now find a way to smoothly decrease (r-l) while always retaining the maximal height possible.
+        '''
+        mx = 0
+        l = 0
+        r = len(height)-1
+        while l<r:
+            print(l,r)
+            mx = max(mx, (r-l) * min(height[r],height[l]))
+            if height[l] < height[r]:
+                l += 1
+            else:
+                r -= 1
+        return mx
+
+        # # Brute force
+        # mx = 0
+        # for r in range(len(height)):
+        #     for l in range(r):
+        #         cur = (r-l) * min(height[r],height[l])
+        #         #print(r, l, min(height[r],height[l]), mx)
+        #         if cur > mx:
+        #             mx = cur
+        # return mx
