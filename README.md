@@ -1,1 +1,1 @@
-Notes on the [algorithms and data dtructures curriculum](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) and solutions to leetcode problems.
+This sandbox repo contains a __banking simulation__ as well as notes on the [algorithms and data structures curriculum](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) and solutions to leetcode problems.
