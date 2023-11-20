@@ -66,3 +66,15 @@ class Solution:
         #         if cur > mx:
         #             mx = cur
         # return mx
+
+
+#%% https://app.codesignal.com/interview-practice/question/rMe9ypPJkXgk3MHhZ/description
+
+def solution(coins, quantity):
+    # Generate a set of with unique sum results by adding a single coin to all previous results
+    res = {0}
+    for c, q in zip(coins, quantity):
+        res  = {
+            r + c * i for r in res for i in range(q+1)
+        }
+    return len(res) -1
