@@ -14,7 +14,7 @@ from time import time
 from typing import Union, Dict
 import functools
 
-
+@dataclass
 class BankAccount:
     def __init__(
         self,
@@ -23,13 +23,6 @@ class BankAccount:
     ) -> None:
         self.name = name
         self.balance = balance
-
-    def send(self, reciever, amount):
-        assert self.balance >= amount, "Not enough money on the bank."
-
-        self.balance -= amount
-        reciever.balance += amount
-
 
 class Bank:
     def __init__(self) -> None:
